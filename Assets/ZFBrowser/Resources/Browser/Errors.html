@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		body {
+			background: rgba(255, 255, 255, .7);
+			color: black;
+		}
+		#loadError, #sadTab {
+			display: none;
+		}
+
+		#loadError .detail {
+			font-size: 90%;
+			color: #444;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="loadError">
+		<h1>Load Error</h1>
+		<p class="mainError"></p>
+		<p class="detail"></p>
+	</div>
+
+	<div id="sadTab">
+		<h1>Page Crashed</h1>
+		<p>The renderer process for this page is no longer running.</p>
+	</div>
+
+	<script type="application/javascript">
+		"use strict";
+		var $ = document.querySelector.bind(document);
+
+		function setErrorInfo(info) {
+			$("#loadError").style.display = "block";
+			$("#loadError .mainError").textContent = "Failed to load " + info.url;
+			$("#loadError .detail").textContent = info.error;
+		}
+
+		function showCrash() {
+			$("#sadTab").style.display = "block";
+		}
+	</script>
+</body>
+</html>
+

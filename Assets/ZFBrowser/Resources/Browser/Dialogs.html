@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		html {
+			width: 100%; height: 100%;
+		}
+		body {
+			position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+			margin: 0; padding: 0;
+			overflow: hidden;
+			color: #eee;
+			font-family: sans-serif;
+			background: rgba(62, 62, 62, .1);
+		}
+		.box {
+			display: none;
+
+			position: fixed;
+			top: 50%; right: 50%;
+			max-height: 100%; max-width: 100%;
+			transform: translate(50%, -50%);
+
+			overflow: auto;
+
+			padding: 15px;
+
+			background: #333;
+			border-radius: 15px;
+			border: 2px solid #999;
+
+			cursor: default;
+			-webkit-user-select: none;
+		}
+		body.lit .box {
+			border-color: #AAA;
+		}
+		.box h2 {
+			margin: 0 0 10px;
+		}
+		.box button {
+			margin: 7px 0px 0px;
+			float: right;
+			font-size: 125%;
+		}
+		.box button[data-affirm="0"] {
+			float: left;
+		}
+		.box p {
+			margin: 4px 0px;
+			white-space: pre-wrap;
+		}
+		.box input {
+			font-size: 110%;
+			width: 100%;
+			margin: 7px 0px;
+			padding: 3px;
+		}
+
+		.menu {
+			display: none;
+			border: 1px solid black;
+			color: black;
+			background: gray;
+			position: absolute;
+			-webkit-user-select: none;
+			overflow: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+		ul.menuList {
+			margin: 0; padding: 0;
+		}
+		ul.menuList > li {
+			margin: 1px;
+			padding: 6px;
+			list-style: none;
+			cursor: default;
+		}
+		ul.menuList > li.sep {
+			padding: 0;
+			height: 5px;
+		}
+		ul.menuList > li.disabled {
+			color: #444;
+		}
+		ul.menuList > li:not(.unpickable) {
+			cursor: pointer;
+		}
+		ul.menuList > li:not(.unpickable):hover {
+			background: darkturquoise;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box" id="alert">
+		<h2>JavaScript Alert</h2>
+		<p></p>
+		<button>OK</button>
+	</div>
+
+	<div class="box" id="confirm">
+		<h2>JavaScript Confirmation</h2>
+		<p></p>
+		<button>OK</button>
+		<button data-affirm="0">Cancel</button>
+	</div>
+
+	<div class="box" id="confirmNav">
+		<h2>Confirm Page Navigation</h2>
+		<div>The page says:</div>
+		<p></p>
+		<div>Do you want to leave this page?</div>
+		<button>Leave</button>
+		<button data-affirm="0">Stay</button>
+	</div>
+
+	<div class="box" id="confirmReload">
+		<h2>Confirm Page Reload</h2>
+		<div>The page says:</div>
+		<p></p>
+		<div>Do you want to reload this page?</div>
+		<button>Reload</button>
+		<button data-affirm="0">Stay</button>
+	</div>
+
+	<div class="box" id="prompt">
+		<h2>JavaScript Prompt</h2>
+		<p></p>
+		<input type="text"><br/>
+		<button>OK</button>
+		<button data-affirm="0">Cancel</button>
+	</div>
+
+	<div class="box" id="auth">
+		<h2>Authentication Prompt</h2>
+		<p></p>
+		<label for="authUser">User name:</label><input id="authUser" type="text"><br/>
+		<label for="authPass">Password:</label><input id="authPass" type="text"><br/>
+		<button>Log In</button>
+		<button data-affirm="0">Cancel</button>
+	</div>
+
+	<div class="menu" id="contextMenu">
+		<ul class="menuList"></ul>
+	</div>
+
+	<script type="application/javascript">
+	"use strict";
+	function $(sel) { return document.querySelector(sel); }
+	function $$(sel) { return Array.from(document.querySelectorAll(sel)); }
+
+	//the embedder will replace these functions:
+	function reportDialogResult(affirm, text1, text2) {
+		console.log("Would report " + JSON.stringify(arguments));
+	}
+	function reportContextMenuResult(commandId) { "Would report " + JSON.stringify(arguments); }
+
+	/**
+	 * Makes the border of the dialog flash subtly.
+	 * This isn't here so much to look nice as to work around a bug
+	 * that sometimes prevents popups from rendering fully.
+	 */
+	function flashBorder() {
+		var speed = 100;
+		document.body.className = "";
+		setTimeout(() => document.body.className = "lit", 1 * speed);
+		setTimeout(() => document.body.className = "", 2 * speed);
+		setTimeout(() => document.body.className = "lit", 3 * speed);
+		setTimeout(() => document.body.className = "", 4 * speed);
+	}
+
+	reset();
+
+	var buttons = document.querySelectorAll(".box button");
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener("click", function() {
+			reportResult(this.getAttribute("data-affirm") !== "0");
+		});
+	}
+
+	var bodyClick = null;
+	var bodyResize = null;
+	var inputFrom = null;
+
+	document.body.addEventListener("click", ev => {
+		if (bodyClick) bodyClick(ev);
+	});
+	window.addEventListener("resize", ev => {
+		if (bodyResize) bodyResize(ev);
+	});
+
+
+	/* global reportDialogResult, reportContextMenuResult */
+	function reportResult(affirm) {
+		if (inputFrom === "prompt") reportDialogResult(affirm, $("#prompt input").value);
+		else if (inputFrom === "auth") reportDialogResult(affirm, $("#authUser").value, $("#authPass").value);
+		else reportDialogResult(affirm);
+		reset();
+	}
+
+
+	//Things the embedder can call:
+	function reset() {
+		$$("body > div").forEach(el => el.style.display = "none");
+		$("#prompt input").value = "";
+		bodyClick = null;
+		bodyResize = null;
+		inputFrom = null;
+	}
+
+	function showAlert(text) {
+		flashBorder();
+		$("#alert").style.display = "block";
+		$("#alert p").textContent = text;
+		inputFrom = null;
+	}
+
+	function showConfirm(text) {
+		flashBorder();
+		$("#confirm").style.display = "block";
+		$("#confirm p").textContent = text;
+		inputFrom = null;
+	}
+
+	function showConfirmNav(text) {
+		flashBorder();
+		$("#confirmNav").style.display = "block";
+		$("#confirmNav p").textContent = text;
+		inputFrom = null;
+	}
+
+	function showConfirmReload(text) {
+		flashBorder();
+		$("#confirmReload").style.display = "block";
+		$("#confirmReload p").textContent = text;
+		inputFrom = null;
+	}
+
+	function showPrompt(text, defaultText) {
+		flashBorder();
+		$("#prompt").style.display = "block";
+		$("#prompt p").textContent = text;
+		$("#prompt input").value = defaultText || "";
+		$("#prompt input").focus();
+		inputFrom = "prompt";
+	}
+
+	function showAuthPrompt(text) {
+		flashBorder();
+		$("#auth").style.display = "block";
+		$("#auth p").textContent = text;
+		$("#auth #authUser").value = "";
+		$("#auth #authPass").value = "";
+		$("#auth #authUser").focus();
+		inputFrom = "auth";
+	}
+
+	function buildMenu(menuDef, ul) {
+		//Note: I have not yet found any cases where we have checkboxes,
+		//radio buttons, or child menus, so they are currently unimplemented.
+
+		ul.innerHTML = "";
+
+		menuDef.forEach(item => {
+			if (!item.visible) return;
+
+			var itemEl = document.createElement("li");
+			ul.appendChild(itemEl);
+
+			if (item.type == "separator") {
+				itemEl.className = "unpickable sep";
+				return;
+			}
+
+
+			//todolater: Underline chars, kb nav
+			itemEl.textContent = item.label.replace(/&/g, "");
+
+			if (item.checked) itemEl.classList.add("checked");
+
+			if (item.commandId && item.enabled) {
+				itemEl.addEventListener("click", () => {
+					reportContextMenuResult(item.commandId);
+					reset();
+				});
+			} else {
+				itemEl.classList.add("unpickable");
+			}
+
+			if (!item.enabled) {
+				itemEl.classList.add("unpickable");
+				itemEl.classList.add("disabled");
+			}
+
+		});
+	}
+
+	function showContextMenu(defJSON, x, y) {
+		var def = JSON.parse(defJSON);
+		bodyClick = ev => {
+			if (ev.target != document.body) return;
+			reportContextMenuResult(-1);
+			reset();
+		};
+
+		var menuEl = $('#contextMenu');
+
+		var ul = $('#contextMenu ul');
+		buildMenu(def, ul);
+
+
+		bodyResize = () => {
+			//Position the menu.
+			menuEl.style.display = "block";
+			menuEl.style.left = "";
+			menuEl.style.right = "";
+			menuEl.style.top = "";
+			menuEl.style.bottom = "";
+
+			//Make sure it's all on screen
+			if (x < 0) x = 0;
+			if (y < 0) y = 0;
+
+			var mw = menuEl.offsetWidth;
+			var mh = menuEl.offsetHeight;
+			var sw = document.body.offsetWidth;
+			var sh = document.body.offsetHeight;
+
+			if (x + mw >= sw) menuEl.style.right = "0";
+			else menuEl.style.left = x + "px";
+
+			if (y + mh >= sh) menuEl.style.bottom = "0";
+			else menuEl.style.top = y + "px";
+		};
+
+		bodyResize();
+	}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,1373 @@
+fileFormatVersion: 2
+guid: 767e53508be9f324183b114bf6b17a0f
+timeCreated: 1607580875
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Example_Image
+    21300002: labelBackground
+    21300004: separator
+    21300006: Window_Header
+    21300008: Tooltip_Background
+    21300010: radioNormal
+    21300012: toggleHover
+    21300014: toggleNormal
+    21300016: radioHover
+    21300018: radioCheckmark
+    21300020: toggleCheckmark
+    21300022: Table_Row_Header_Background
+    21300024: Table_Row_Normal_Background
+    21300026: Table_Row_Normal_Background_Hover
+    21300028: textFieldFocused
+    21300030: textFieldNormal
+    21300032: Slider_Horizontal_Background
+    21300034: Slider_Vertical_Background
+    21300036: Slider_Horizontal_ThumbHover
+    21300038: Slider_Horizontal_ThumbNormal
+    21300040: Slider_Vertical_ThumbHover
+    21300042: Slider_Vertical_ThumbNormal
+    21300044: Table_Row_Header_Separator
+    21300046: Table_Row_Normal_Separator
+    21300048: Loading_Bar_Background
+    21300050: Image_Box_Background
+    21300052: Loading_Bar_Fill
+    21300054: ScrollBar_Horizontal_Background
+    21300056: ScrollBar_Vertical_Background
+    21300058: ScrollBar_Horizontal_ThumbNormal
+    21300060: ScrollBar_Vertical_ThumbNormal
+    21300062: ScrollBar_Horizontal_ThumbHover
+    21300064: ScrollBar_Vertical_ThumbHover
+    21300066: ScrollBar_Vertical_Top_Button
+    21300068: ScrollBar_Horizontal_Button_Right
+    21300070: ScrollBar_Horizontal_Button_Left
+    21300072: ScrollBar_Vertical_Bottom_Button
+    21300074: buttonPressed
+    21300076: buttonHover
+    21300078: buttonNormal
+    21300080: smallButton_Hover
+    21300082: smallButton_Pressed
+    21300084: smallButton_Normal
+    21300086: tinyButton_Hover
+    21300088: tinyButton_Normal
+    21300090: tinyButton_Pressed
+    21300092: arrowButtonRight_Normal
+    21300094: arrowButtonRight_Pressed
+    21300096: arrowButtonLeft_Hover
+    21300098: arrowButtonRight_Hover
+    21300100: arrowButtonLeft_Normal
+    21300102: arrowButtonLeft_Pressed
+    21300104: tinyButton_Mail
+    21300106: tinyButton_Accept
+    21300108: tinyButton_Decline
+    21300110: tinyButton_Social
+    21300112: iconButton_Star_Hover
+    21300114: iconButton_Star_Normal
+    21300116: iconButton_Star_Pressed
+    21300118: iconButton_Heart_Pressed
+    21300120: iconButton_Heart_Normal
+    21300122: iconButton_Heart_Hover
+    21300124: iconButton_Decline_Pressed
+    21300126: iconButton_Decline_Hover
+    21300128: iconButton_Decline_Normal
+    21300130: iconButton_Plus_Hover
+    21300132: iconButton_Plus_Pressed
+    21300134: iconButton_Plus_Normal
+    21300136: arrowButtonMiddle_Pressed
+    21300138: arrowButtonMiddle_Normal
+    21300140: arrowButtonMiddle_Hover
+    21300142: Window_Background
+    21300144: SmallWindow_Background
+    21300146: SLA_Frame_10
+    21300148: SLA_Frame_19
+    21300150: SLA_Frame_13
+    21300152: SLA_Frame_18
+    21300154: SLA_Frame_02
+    21300156: SLA_Frame_11
+    21300158: SLA_Frame_04
+    21300160: SLA_Frame_03
+    21300162: SLA_Frame_17
+    21300164: SLA_Frame_12
+    21300166: SLA_Frame_16
+    21300168: SLA_Frame_09
+    21300170: SLA_Frame_20
+    21300172: SLA_Frame_15
+    21300174: SLA_Frame_14
+    21300176: SLA_Frame_06
+    21300178: SLA_Frame_07
+    21300180: SLA_Frame_05
+    21300182: SLA_Frame_01
+    21300184: SLA_Frame_08
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Window_Background
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 48, y: 69, z: 64, w: 51}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Loading_Bar_Background
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 514
+        width: 937
+        height: 59
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Image_Box_Background
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 369
+        height: 102
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 14, y: 14, z: 14, w: 14}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Example_Image
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 104
+        width: 355
+        height: 88
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Loading_Bar_Fill
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 575
+        width: 903
+        height: 31
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Window_Header
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 194
+        width: 398
+        height: 48
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 28, y: 6, z: 12, w: 26}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_10
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 0
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_18
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 575
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_13
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 244
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_07
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 357
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 244
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_19
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 357
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_11
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 244
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_04
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 357
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_17
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 244
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_02
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 357
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_03
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 801
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_16
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 688
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_15
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 801
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_14
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 688
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_09
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 801
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_05
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 688
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_06
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 801
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 608
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: SLA_Frame_08
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 608
+        width: 111
+        height: 111
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: buttonHover
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 207
+        height: 55
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 14, y: 16, z: 14, w: 16}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: buttonPressed
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 608
+        width: 207
+        height: 55
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 14, y: 16, z: 14, w: 16}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: buttonNormal
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 608
+        width: 207
+        height: 55
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 14, y: 16, z: 14, w: 16}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Tooltip_Background
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 665
+        width: 202
+        height: 47
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 20, y: 16, z: 14, w: 10}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: smallButton_Hover
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 113
+        width: 137
+        height: 49
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 14, y: 14, z: 14, w: 14}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: smallButton_Pressed
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 688
+        width: 137
+        height: 49
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 14, y: 14, z: 14, w: 14}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: smallButton_Normal
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 714
+        width: 137
+        height: 49
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 14, y: 14, z: 14, w: 14}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: labelBackground
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 470
+        width: 166
+        height: 33
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Table_Row_Header_Background
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 470
+        width: 128
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 10, y: 10, z: 10, w: 10}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Table_Row_Normal_Background
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 470
+        width: 128
+        height: 35
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 4, y: 6, z: 4, w: 4}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Table_Row_Normal_Background_Hover
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 739
+        width: 128
+        height: 35
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 4, y: 6, z: 4, w: 4}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Slider_Horizontal_Background
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 665
+        width: 365
+        height: 10
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 4, y: 4, z: 4, w: 5}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: textFieldFocused
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 507
+        width: 64
+        height: 53
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 15, y: 15, z: 15, w: 15}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: textFieldNormal
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 164
+        width: 64
+        height: 53
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 15, y: 15, z: 15, w: 15}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: separator
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 677
+        width: 366
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Horizontal_Background
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 765
+        width: 328
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 2, y: 3, z: 2, w: 3}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tinyButton_Normal
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 219
+        width: 44
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tinyButton_Hover
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 265
+        width: 44
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tinyButton_Pressed
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 311
+        width: 44
+        height: 44
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Slider_Vertical_Background
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 0
+        width: 10
+        height: 165
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 5, y: 4, z: 4, w: 4}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Vertical_Background
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 357
+        width: 9
+        height: 129
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: radioNormal
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 164
+        width: 28
+        height: 28
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: toggleHover
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 164
+        width: 28
+        height: 28
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: radioHover
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 470
+        width: 28
+        height: 28
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: toggleNormal
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 608
+        width: 28
+        height: 28
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonLeft_Normal
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 638
+        width: 30
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonLeft_Pressed
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 357
+        width: 30
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonRight_Pressed
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 384
+        width: 30
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonRight_Normal
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 411
+        width: 30
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonRight_Hover
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 438
+        width: 30
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonLeft_Hover
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 465
+        width: 30
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tinyButton_Mail
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 194
+        width: 30
+        height: 23
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tinyButton_Accept
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 219
+        width: 28
+        height: 23
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tinyButton_Decline
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 765
+        width: 24
+        height: 26
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: tinyButton_Social
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 721
+        width: 24
+        height: 25
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Star_Pressed
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 665
+        width: 20
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Star_Normal
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 219
+        width: 20
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Star_Hover
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 714
+        width: 20
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Heart_Hover
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 714
+        width: 19
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Heart_Pressed
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 714
+        width: 19
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Heart_Normal
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 665
+        width: 19
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Decline_Normal
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 665
+        width: 18
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Decline_Pressed
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 665
+        width: 18
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Decline_Hover
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 665
+        width: 18
+        height: 20
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Plus_Normal
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 721
+        width: 18
+        height: 19
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Plus_Hover
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 742
+        width: 18
+        height: 19
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: iconButton_Plus_Pressed
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 721
+        width: 18
+        height: 19
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonMiddle_Normal
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 488
+        width: 13
+        height: 15
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonMiddle_Pressed
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 748
+        width: 13
+        height: 15
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: arrowButtonMiddle_Hover
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 608
+        width: 13
+        height: 15
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Horizontal_ThumbNormal
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 492
+        width: 24
+        height: 7
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 3, y: 3, z: 3, w: 3}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Horizontal_ThumbHover
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 562
+        width: 24
+        height: 7
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 3, y: 3, z: 3, w: 3}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Vertical_ThumbHover
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 167
+        width: 7
+        height: 24
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 3, y: 3, z: 3, w: 3}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Vertical_ThumbNormal
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 164
+        width: 7
+        height: 24
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 3, y: 3, z: 3, w: 3}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Slider_Horizontal_ThumbHover
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 625
+        width: 11
+        height: 15
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Slider_Vertical_ThumbNormal
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 642
+        width: 15
+        height: 11
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Slider_Vertical_ThumbHover
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 562
+        width: 15
+        height: 11
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Slider_Horizontal_ThumbNormal
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 505
+        width: 11
+        height: 15
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Table_Row_Header_Separator
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 357
+        width: 5
+        height: 29
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Horizontal_Button_Left
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 748
+        width: 9
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Vertical_Bottom_Button
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 562
+        width: 9
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Vertical_Top_Button
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 562
+        width: 9
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: ScrollBar_Horizontal_Button_Right
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 562
+        width: 9
+        height: 9
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Table_Row_Normal_Separator
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 608
+        width: 2
+        height: 28
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: radioCheckmark
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 104
+        width: 6
+        height: 6
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: toggleCheckmark
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 655
+        width: 6
+        height: 6
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

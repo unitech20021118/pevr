@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 7d29444a3446e8b4fbe2e76a72d7d598
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - _audioCapture: {instanceID: 0}
+  - _shaderSwapRedBlue: {fileID: 4800000, guid: f8dc701632c759e4a8f2ee16201149cd,
+      type: 1}
+  executionOrder: 300
+  icon: {instanceID: 0}

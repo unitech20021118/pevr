@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1630395201326672}
+  m_IsPrefabParent: 1
+--- !u!1 &1630395201326672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4023119679987004}
+  - component: {fileID: 114825207399569004}
+  - component: {fileID: 114823768506553918}
+  m_Layer: 0
+  m_Name: UniFBX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1644882513901692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4441575888229042}
+  - component: {fileID: 114292808412562964}
+  - component: {fileID: 114223176743609076}
+  m_Layer: 0
+  m_Name: UniFBXStads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4023119679987004
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1630395201326672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 96.25785, y: 440.82425, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4441575888229042}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4441575888229042
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644882513901692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4023119679987004}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114223176743609076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644882513901692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc05de453dae4f4d853e0daeed1f183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uimport: {fileID: 0}
+  uniFBXTexture: {fileID: 2800000, guid: 04229f01876f18b4dae9f7db5d418134, type: 3}
+--- !u!114 &114292808412562964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644882513901692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956fcda9e26cbec4a82afeaf4ce03c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityLogo: {fileID: 2800000, guid: 0371d8025da3e394aac20f11ced9397a, type: 3}
+--- !u!114 &114823768506553918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1630395201326672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24933cb66b9977f4f8761f1fe319616e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setting:
+    paths:
+      urlModels: file:///C:/models/
+      urlTextures: file:///C:/models/tex/
+      filename: mymodel
+      runnningMethode: 0
+      objectPerFrame: 5
+      maxThreads: 2
+    meshes:
+      scaleFactor: 0.01
+      meshImport: 0
+      meshMethode: 0
+      normalMethode: 2
+      colliderType: 0
+      rendererOnLoad: 1
+    materials:
+      materialImported: 0
+      shaderType: 0
+      standardMaterial: {fileID: 0}
+      colorDefault: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    textures:
+      textureImported: 0
+      colormaps: 1
+      normalmaps: 0
+      heightmaps: 0
+      occlusionmaps: 0
+      emissionmaps: 0
+      detailmasks: 0
+    animations:
+      animationImported: 0
+      animationMethode: 0
+      animatorController: {fileID: 0}
+      animationWrap: 0
+      frameRate: 1
+    lights:
+      lightImported: 1
+      importMethode: 1
+      lightType: 2
+      shadows: 0
+      renderMode: 0
+      lightRange: 100
+    cameras:
+      cameraImported: 1
+      cameraClearFlags: 1
+    splines:
+      splineImported: 1
+      splineDrawing: 1
+    Status: 0
+  parent: {fileID: 0}
+--- !u!114 &114825207399569004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1630395201326672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb6865114f4a40c4bab450390f030a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

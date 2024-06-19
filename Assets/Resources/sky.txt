@@ -1,0 +1,17 @@
+{
+"sky":
+[
+
+{
+"name":"yin",
+"modelpath":"Sky/yin/yin"
+,"name2":"ÒõÌì"
+},
+{
+"name":"blue",
+"modelpath":"Sky/blue/blue"
+,"name2":"À¶Ìì"
+}
+]
+
+}

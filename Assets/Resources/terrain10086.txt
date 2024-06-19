@@ -1,0 +1,8 @@
+﻿{
+"terrain":
+[
+{"name":"gaia","modelpath":"AssetBundles/gaia.3dpro","name2":"午后海岛"},
+{"name":"gaia2","modelpath":"AssetBundles/gaia2.3dpro","name2":"午后湖泊"},
+{"name":"gaia3","modelpath":"AssetBundles/gaia3.3dpro","name2":"斜晖丘陵"}
+]
+}

@@ -1,0 +1,9 @@
+fileFormatVersion: 1
+guid: f41e58c74463edf43a9624fcdf483d19
+MonoImporter:
+  importerVersion: 1
+  defaultReferences:
+    _shaderSwapRedBlue: {fileID: 4800000, guid: f8dc701632c759e4a8f2ee16201149cd,
+      type: 1}
+    _shaderRGBA2YCbCr: {fileID: 4800000, guid: d21befa361dcbc6489decfa310898604, type: 1}
+  executionOrder: 100

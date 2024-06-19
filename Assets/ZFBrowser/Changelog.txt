@@ -1,0 +1,51 @@
+(Version numbers: http://semver.org/)
+
+1.1.0:
+Features:
+  - You can now adjust or add Chromium switches with
+    BrowserNative.commandLineSwitches.
+  - Experimental Adobe Flash support (see Readme)
+  - CallFunction and EvalJS now return results through a promise; it's
+    now much easier to query the page for a specific value.
+  - Massively revamped Readme formatting.
+  - Cookie API (delete all cookies, CRUD any cookie, date features
+    experimental)
+  - Added a simpler example of calling/getting called by JS.
+  - Added API for setting a custom user agent.
+Fixes:
+  - Browser should now work correctly with unicode characters in the path.
+  - We no longer display an error on page load abort. This allows you to
+    see incomplete page loads and also keeps things from breaking if you
+    double-click a link.
+  - Remove non-ASCII characters from the user agent so things don't break.
+  - Dynamically instantiating a BrowserGUI should now work instead of
+    dying in the mouse input code.
+  - Fix issues with GUIBrowserUI + touchscreen + build.
+  - Unity 5.4: Don't spam errors about cursor formats.
+  - Unity 5.5: Cope with Profiler namespace change.
+	- localGame:// will strip query strings/hashes and try to find the
+    underlying file instead of always failing when one is present.
+
+1.0.2:
+Fixes:
+  - OS X: Asset Store packages still weren't getting the right child process
+    permissions, so now the executable permission is always added when
+    starting a browser in the Editor.
+
+
+1.0.1:
+Fixes:
+  - Rebuild package so ZFGameBrowser has the correct initial permissions
+    on OS X.
+  - Correctly build browser_assets runtime resource even if there is no
+    BrowserAssets directory.
+  - NewWindow demo explains how to unzip BrowserAssets like MainDemo.
+  - Demo explanation should no longer be replaced by an error on very
+    slow computers.
+  - Disabling and re-enabling a BrowserGUI GameObject should no longer
+    break automatic resizing.
+
+
+1.0.0:
+  Initial release
+

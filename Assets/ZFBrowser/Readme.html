@@ -1,0 +1,409 @@
+<html>
+<head>
+	<title>ZFBrowser Documentation</title>
+	<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABL1BMVEUAAAAAAAAAAAAAAAAAAAAQAAABBBwZAAAAFAUUAAAADwMAAAAAAAAAAAAAAAAAAAAAAAAABgIuAAAsAAAANQwAGAUAAg0AAAAAAAAAAAAAAAAAAAAAwzIAvzAEOvwEPP8ESP0EQ/0EP/0ABQvtAAADMfgAHpkA1DkAzjcAyzYAyDUAuC0AaBj4AADyAADpAADmAADjAADWAADLAABAAAAFS/8DNP8FTf4DNvwEOPYDK/ICIroCEF0A0DkAvC8AnyYAnCUAkCIAdxwAAhgAQQ8bBAECBAB4AQD7AADwAADfAADcAAC5AAC0AACIAABOAAADMf8DJcwCIbACHaMCGYsBD0EBDTYAlSEAjSEASREASBEAAw8TAgwAMQsCJQkALwgAQAT0AADhAABjAABeAABD9A36AAAAHHRSTlMAGK5/eP7B1syvpoloYFUTAfnr6ujkvaaUb10gmPaQKAAAAOZJREFUGNM1j9dWwlAQRSeFSBGw13tBTQA1HSLSpPdmV3r//29gILDfzj7rrDUDGxif2+l0+xjYcgT8WbGQyxWUc942l9XqpCfLWUrLHkA4q9NsWwqlhJCyF/cnpqrWpUqekOen7DEDN11N0+b1WhHzY2TAg6stSY2GWlMwv0X6LBzEdF2XjMqYYqbiBQrTMGJWqTTLy//TbwFcneYiOkonk+k/8fczxYK32zLfwy939w/BePzjhwfmtBV1BF9RBBKJlOjHw5Z7EQhlDgG5Wu0moYzH/u7aIX5hHR5ib3PLsYLAcn5A1tqnJNnWRf14AAAAAElFTkSuQmCC">
+	<style type="text/css">
+		body {
+			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		* { box-sizing: border-box; }
+
+		#title {
+			position: absolute;
+			top: 0; left: 0; right: 0; height: 40px;
+			border-bottom: 1px solid black;
+			font-size: 28px;
+			padding: 4px;
+		}
+
+		#toc {
+			position: absolute;
+			top: 40px; left: 0; bottom: 0; width: 200px;
+			overflow: auto;
+			padding: 4px;
+		}
+
+		#toc ul {
+			padding: 0px 15px;
+			font-size: 80%;
+			margin: 5px;
+		}
+		#toc .sidebar-header-2 {
+			margin-left: 10px;
+			list-style-type: circle;
+		}
+		#toc .sidebar-header-3 {
+			margin-left: 20px;
+			list-style-type: circle;
+		}
+
+		#content {
+			position: absolute;
+			top: 40px; right: 0; bottom: 0; left: 200px;
+			overflow: auto;
+			border-left: 1px solid black;
+			padding: 0px 18px;
+		}
+
+		code {
+			background: #EEE;
+			border: 1px solid #CCC;
+			padding: 0 2px;
+			margin: 0 2px;
+		}
+
+		pre code {
+			display: block;
+			margin: 2px;
+		}
+
+		h1 {
+			font-size: 1.5em;
+			border-bottom: 1px solid gray;
+		}
+
+		h2 { font-size: 1.2em; }
+		h3 { font-size: 1.0em; }
+
+	</style>
+
+</head>
+<body>
+
+<div id="title">ZFBrowser Documentation</div>
+
+<div id="toc"><ul class="nav nav-list">
+    <li class="sidebar-header-1"><a href="#zfbrowser-documentation">ZFBrowser Documentation</a></li>
+    <li class="sidebar-header-1"><a href="#quick-start">Quick Start</a></li>
+    <li class="sidebar-header-1"><a href="#general">General</a></li>
+    <li class="sidebar-header-2"><a href="#important-note">Important Note</a></li>
+    <li class="sidebar-header-2"><a href="#supported-platforms">Supported Platforms</a></li>
+    <li class="sidebar-header-2"><a href="#os-x-users">OS X Users</a></li>
+    <li class="sidebar-header-1"><a href="#scripting">Scripting</a></li>
+    <li class="sidebar-header-2"><a href="#a-word-about-javascript">A word about JavaScript</a></li>
+    <li class="sidebar-header-2"><a href="#scripting-intro">Scripting Intro</a></li>
+    <li class="sidebar-header-2"><a href="#notes">Notes</a></li>
+    <li class="sidebar-header-2"><a href="#promises">Promises</a></li>
+    <li class="sidebar-header-1"><a href="#embedded-resources">Embedded Resources</a></li>
+    <li class="sidebar-header-2"><a href="#notes-1">Notes</a></li>
+    <li class="sidebar-header-1"><a href="#input">Input</a></li>
+    <li class="sidebar-header-1"><a href="#customization">Customization</a></li>
+    <li class="sidebar-header-1"><a href="#debugging">Debugging</a></li>
+    <li class="sidebar-header-2"><a href="#page-debugging">Page Debugging</a></li>
+    <li class="sidebar-header-3"><a href="#page-inspector">Page Inspector</a></li>
+    <li class="sidebar-header-3"><a href="#external-page-inspector">External Page Inspector</a></li>
+    <li class="sidebar-header-3"><a href="#ordinary-browser">Ordinary Browser</a></li>
+    <li class="sidebar-header-2"><a href="#visual-studio-tools-for-unity">Visual Studio Tools for Unity</a></li>
+    <li class="sidebar-header-2"><a href="#chromium-out-of-process">Chromium out of Process</a></li>
+    <li class="sidebar-header-1"><a href="#cookies">Cookies</a></li>
+    <li class="sidebar-header-1"><a href="#notes-2">Notes</a></li>
+    <li class="sidebar-header-2"><a href="#latency/performance">Latency/Performance</a></li>
+    <li class="sidebar-header-1"><a href="#adobe-flash">Adobe Flash</a></li>
+    <li class="sidebar-header-2"><a href="#do-i-need-it?">Do I need it?</a></li>
+    <li class="sidebar-header-2"><a href="#for-myself-(manual-install)">For myself (manual install)</a></li>
+    <li class="sidebar-header-2"><a href="#for-anyone-(distribute-flash)">For anyone (distribute Flash)</a></li>
+    <li class="sidebar-header-1"><a href="#known-issues">Known issues</a></li>
+    <li class="sidebar-header-1"><a href="#ideas">Ideas</a></li>
+    <li class="sidebar-header-1"><a href="#get-help">Get Help</a></li>
+</ul>
+
+</div>
+
+<div id="content"><h1 id="zfbrowser-documentation"><a class="header-link" href="#zfbrowser-documentation"></a>ZFBrowser Documentation</h1>
+<p>This asset allows you to embed a full copy of Chromium, the open-source core of Google Chrome, inside your game!</p>
+<p><a href="http://zenfulcrum.com/browser">Product Page</a> | <a href="https://www.assetstore.unity3d.com/#!/content/55459">Unity Asset Store</a> | <a href="Changelog.txt">Changelog</a> | <a href="mailto:support@zenfulcrum.com">Get Help</a></p>
+<p>Documentation for v1.1.0.</p>
+<p><small>Copyright &copy; 2015-2017 Zen Fulcrum LLC</small></p>
+<h1 id="quick-start"><a class="header-link" href="#quick-start"></a>Quick Start</h1>
+<p>Basic Browser:</p>
+<ul class="list">
+<li>If you are using OS X be sure to <a href="#os-x-users">read these notes</a>.</li>
+<li>Import ZFBrowser into your project.</li>
+<li>Grab <code>ZFBrowser/Prefabs/BrowserQuad</code> and drop it into your scene.</li>
+<li>On this new object, set the URL to a site of your choice, such as <code>http://google.com/</code></li>
+<li>Fiddle with your camera so the quad fills most of the view.</li>
+<li>Hit play and interact with the web site.</li>
+</ul>
+<p>Embedded assets:</p>
+<ul class="list">
+<li>Start with the scene above.</li>
+<li>Create a folder called <code>BrowserAssets</code> right next to (not inside!) your <code>Assets</code> folder.</li>
+<li>Create a file called <code>index.html</code> inside <code>BrowserAssets</code> and put this in it: <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code></li>
+<li>Set the URL for the BrowserQuad to <code>localGame://index.html</code></li>
+<li>Hit play.</li>
+</ul>
+<p>Congratulations! You now have a browser in your game!</p>
+<h1 id="general"><a class="header-link" href="#general"></a>General</h1>
+<h2 id="important-note"><a class="header-link" href="#important-note"></a>Important Note</h2>
+<p>This library is made possible by a number of third-party open source software projects!</p>
+<p>Include a copy of <a href="ThirdPartyNotices.txt">ThirdPartyNotices.txt</a> with your distributed product.</p>
+<h2 id="supported-platforms"><a class="header-link" href="#supported-platforms"></a>Supported Platforms</h2>
+<p>This plugin is available for the given platforms and architectures:</p>
+<ul class="list">
+<li>Windows Standalone, 32- and 64-bit <small>(Windows Standalone <em>does not</em> include WSA/UWP)</small></li>
+<li>OS X Standalone, 64-bit</li>
+</ul>
+<p>Browsers can be previewed when running inside the Unity Editor on the following platforms:</p>
+<ul class="list">
+<li>Unity Editor, Windows Standalone, 32- and 64-bit</li>
+<li>Unity Editor, OS X Standalone, 64-bit</li>
+</ul>
+<p>At present, you <em>must</em> use the same OS you are targeting to preview in the Unity Editor. For example, you must be running the 64-bit Windows Unity Editor to preview browsers when targeting Windows Standalone x64.</p>
+<p>A 64-bit Linux port is partially completed but too unstable for distribution at this time. If you&#39;re excited to see this reach completion, <a href="mailto:info@zenfulcrum.com">send me an email</a>.</p>
+<p>This Asset does not includes licenses for <a href="http://ossguy.com/?p=233">proprietary or patent-encumbered codecs</a> such as h.264 and mp3. Consider re-encoding your content with an open codec supported by Chromium or use consider using <a href="#adobe-flash">Adobe Flash</a> to play your content.</p>
+<h2 id="os-x-users"><a class="header-link" href="#os-x-users"></a>OS X Users</h2>
+<ul class="list">
+<li>By default, your new Unity project will target universal builds, you&#39;ll need to change it to x64 before you can build and run your application.</li>
+<li>The Asset Store strips the executable bit off our child process. After importing the Asset, run a browser in the editor&#39;s playmode at least once before exporting a build. This will ensure the permission gets added back so the system can run.</li>
+<li>When running under the Unity Editor in OS X (or Linux), an extra layer of indirection must be used to avoid library conflicts. This reduces performance in the editor. Run a standalone build to see actual performance.</li>
+<li>At present, OS X builds must be made from OS X.</li>
+</ul>
+<h1 id="scripting"><a class="header-link" href="#scripting"></a>Scripting</h1>
+<p>You can send and receive messages from the currently loaded browser page.</p>
+<h2 id="a-word-about-javascript"><a class="header-link" href="#a-word-about-javascript"></a>A word about JavaScript</h2>
+<p>Browsers run JavaScript, specifically, ECMAScript. JavaScript has a .js extension.
+Unity runs .NET languages, in particular: C# (.cs), Boo (.boo), and UnityScript (.js). Due to a terrible historical mistake, UnityScript has been, and often still is, called &quot;JavaScript&quot;. To be clear:</p>
+<blockquote>
+<p><strong>UnityScript IS NOT JavaScript.</strong></p>
+</blockquote>
+<p>In this package all references to &quot;JavaScript&quot; refer to what web browsers run.
+Beware that UnityScript and JavaScript files both have the same .js extension. In general, files in Assets/ with a .js extension will be treated as UnityScript and files in BrowserAssets/ with a .js extension will be treated as JavaScript.</p>
+<h2 id="scripting-intro"><a class="header-link" href="#scripting-intro"></a>Scripting Intro</h2>
+<p>Browsers have a <code>Browser</code> MonoBehaviour. You can call functions in the page by invoking <code>CallFunction</code>:</p>
+<pre class="hljs"><code><span class="hljs-keyword">using</span> ZenFulcrum.EmbeddedBrowser;
+...
+<span class="hljs-keyword">var</span> browser = GetComponent&lt;Browser&gt;();<span class="hljs-comment">//assuming we are a MonoBehaviour attached to the same GameObject as the Browser</span>
+
+<span class="hljs-comment">//calls window.setPlayerStats("myPlayerName", 2, 4200, false) in the browser</span>
+browser.CallFunction(<span class="hljs-string">"setPlayerStats"</span>, <span class="hljs-string">"myPlayerName"</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4200</span>, <span class="hljs-literal">false</span>);</code></pre><p>Functions are resolved in the global scope of the top frame of the browser and executed with the given arguments. You can pass basic types (strings, integers, bools, etc.) without any extra effort.</p>
+<p>You can also use <code>EvalJS</code> to run any JavaScript you&#39;d like in the context of the page:</p>
+<pre class="hljs"><code>browser.EvalJS(<span class="hljs-string">"if (someCondition()) someVar = 42;"</span>)<span class="hljs-comment">;</span></code></pre><p>To query the page for data, you can look at the return value. <code>EvalJS</code> and <code>CallFunction</code> don&#39;t execute immediately, they are asynchronous, therefore they return promises:</p>
+<pre class="hljs"><code>browser.EvalJS(<span class="hljs-string">"document.title"</span>).Then(<span class="hljs-keyword">ret</span> =&gt; Debug.<span class="hljs-built_in">Log</span>(<span class="hljs-string">"Document title: "</span> + <span class="hljs-keyword">ret</span>));
+browser.CallFunction(<span class="hljs-string">"doSomeFoo"</span>, 1, 2, 3).Then(<span class="hljs-keyword">ret</span> =&gt; Debug.<span class="hljs-built_in">Log</span>(<span class="hljs-string">"Result: "</span> + <span class="hljs-keyword">ret</span>));</code></pre><p>If you are in a Unity corountine, you can wait for the promises to finish before continuing:</p>
+<pre class="hljs"><code><span class="hljs-built_in">var</span> promise = browser.EvalJS(<span class="hljs-string">"document.title"</span>);
+<span class="hljs-keyword">yield</span> <span class="hljs-keyword">return</span> promise.ToWaitFor();
+Debug.<span class="hljs-keyword">Log</span>(<span class="hljs-string">"Document title: "</span> + promise.Value);</code></pre><p>This can be much easier to deal with in cases where you are chaining a lot of tasks.</p>
+<p>See <a href="#promises">the promise section</a> for more details on the promise library.</p>
+<p>To receive events pushed from the page, you can expose a function callback. Do this with <code>RegisterFunction</code>:</p>
+<pre class="hljs"><code>browser.RegisterFunction(<span class="hljs-string">"confirmClicked"</span>, <span class="hljs-keyword">args</span> =&gt; Debug.<span class="hljs-built_in">Log</span>(<span class="hljs-string">"Button clicked: "</span> + <span class="hljs-keyword">args</span>[0] + <span class="hljs-string">" val: "</span> + (int)<span class="hljs-keyword">args</span>[1]));</code></pre><p>Then you can call it from your page:</p>
+<pre class="hljs"><code><span class="hljs-comment">&lt;!-- When this is clicked, Unity will log "Button clicked: button3 val: 13" --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"confirmClicked('button3', 13)"</span>&gt;</span>Confirm Things<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre><h2 id="notes"><a class="header-link" href="#notes"></a>Notes</h2>
+<ul class="list">
+<li>The functions that return data from a page return a <code>JSONNode</code>. This class which implicitly converts to basic types like strings and integers. Take a look in JSONNode.cs for more information.</li>
+<li>If you&#39;d like to pass something more complex than a basic type, build a <code>JSONNode</code>. A <code>JSONNode</code> allows you to build and access JSON data using a fairly fluent language-native interface.</li>
+<li>If you&#39;d like to pass something yet still more complex, or have data automatically read from your objects&#39; fields:<ul class="list">
+<li>You can use <a href="http://docs.unity3d.com/Manual/JSONSerialization.html">Unity&#39;s JSON serialization</a> to pack and unpack data on the Unity side.</li>
+<li>You can use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON.stringify/parse</a> on the JavaScript/browser side.</li>
+</ul>
+</li>
+<li>You can also evaluate raw JavaScript in the browser by calling browser.EvalJS</li>
+<li>If the Browser isn&#39;t ready for commands or the page isn&#39;t loaded yet, it will queue your commands and execute them then the page is loaded.</li>
+<li>The JavaScript execution engine is V8. Not only is JavaScript support robust and complete, you can also use some <a href="http://es6-features.org/">es6 features</a>.</li>
+<li>Note that functions you expose won&#39;t be available at the time of the HTML load event. If you need to know when the page loads, use browser.WhenLoaded (Unity side).</li>
+<li>Check out the included demo and examples for some example code and use cases.</li>
+</ul>
+<h2 id="promises"><a class="header-link" href="#promises"></a>Promises</h2>
+<p>ZFBrowser uses <a href="https://github.com/Real-Serious-Games/C-Sharp-Promise">this promise library</a> made by Real Serious Games with some small changes.</p>
+<p>Original documentation can be <a href="Promises.html">found here</a> or <a href="https://github.com/Real-Serious-Games/C-Sharp-Promise/blob/master/README.md">online here</a>.</p>
+<p>This copy has been modified a bit from the version you can get from GitHub, namely:</p>
+<ul class="list">
+<li>The library namespace has been changed from <code>RSG</code> to <code>ZenFulcrum.EmbeddedBrowser</code> namespace for simplicity and to avoid potential conflicts.</li>
+<li>An <code>UnhandledException</code> handler for <code>Debug.LogError</code> is registered by default.</li>
+<li>You can use Promises with coroutines: <code>yield return somePromise.ForCoroutine();</code> waits for the promise to be rejected or resolved.</li>
+<li>You can query a Promise for its resolved value (or rejection) with <code>promise.Value</code>.</li>
+</ul>
+<p>The promise library is covered by the MIT license, as noted in ThirdPartyNoticies.txt.</p>
+<h1 id="embedded-resources"><a class="header-link" href="#embedded-resources"></a>Embedded Resources</h1>
+<p>You can embed web resources (HTML, JS, CSS, images, etc.) with your game and access them without the need for an external web server.</p>
+<p>Place these resources in a folder named <code>BrowserAssets</code> next to your <code>Assets</code> folder, then access them with <code>localGame://index.html</code> instead of the usual <code>http://example.com/index.html</code>.</p>
+<h2 id="notes-1"><a class="header-link" href="#notes-1"></a>Notes</h2>
+<ul class="list">
+<li>localGame:// is treated like a unique domain and is subject to same-domain policies like other websites.<ul class="list">
+<li>Remember: If you want to run scripts on arbitrary websites, you can open a browser to that website and inject JavaScript with browser.EvalJS.</li>
+</ul>
+</li>
+<li>If you want to customize or change how these resources are fetched, read the documentation in WebResources.cs.</li>
+<li>In the editor, you can simply refresh a page to see updated changes for changed files.</li>
+<li>File names are case-sensitive! Test your standalone build. Under the Editor some platforms may incorrectly load wRonGcapS successfully.</li>
+<li>When you build, all browser assets are packaged up as a single file and included with the build.</li>
+<li>localGame:// is not the actual URL the browser uses, so don&#39;t hardcode it in your HTML. (The real URL is currently <code>https://game.local/</code>, but may change.)</li>
+<li>Avoid putting untrusted code in BrowserAssets</li>
+<li>You may need to URL-encode your path if it contains non-alphanumeric characters. <a href="https://en.wikipedia.org/wiki/Percent-encoding">How to encode</a></li>
+</ul>
+<h1 id="input"><a class="header-link" href="#input"></a>Input</h1>
+<p>All mouse/keyboard input events are collected in Unity and forwarded to the underlying browser. How this input is sent can be customized.</p>
+<ul class="list">
+<li>Mouse clicks and keyboard events are fed to the Browser via the <code>IBrowserUI</code> interface. Additionally, the <code>IBrowserUI</code> informs us about mouse cursor changes from the page.</li>
+<li>This package comes with a few useful versions of <code>IBrowserUI</code> out of the box:<ul class="list">
+<li><code>ClickMeshBrowserUI</code> (used by default) - Lets you click and interact with browsers with a free mouse hovering over the scene.<ul class="list">
+<li>Requires a mesh collider.</li>
+<li>It projects the mouse&#39;s position into the scene with the main camera and a physics raycast.</li>
+<li>UVs on the mesh collider are used to look up the &quot;in-browser&quot; mouse position.</li>
+<li>If the mouse if over the browser it is considered focused and will receive keyboard input.</li>
+<li>Automatically updates the mouse cursor to reflect the currently hovered area.</li>
+<li>Used by default, so long as the browser has a MeshCollider.</li>
+</ul>
+</li>
+<li><code>FPSBrowserUI</code> - Lets a first-person controlled character interact with items in a scene by walking up and pointing.<ul class="list">
+<li>Extends <code>ClickMeshBrowserUI</code>, but:<ul class="list">
+<li>Mouse position is inferred from the direction the camera is pointing.</li>
+<li>Creates a single <code>FPSCursorRenderer</code> in the scene to render the central cursor and crosshair for you.</li>
+</ul>
+</li>
+<li>Attach to a browser to use it. See the demo for a working example. A prefab is also included.</li>
+</ul>
+</li>
+<li><code>GUIBrowserUI</code> - For use with full-screen browsers and browsers alongside non-browser UI elements.<ul class="list">
+<li>Operates inside a Unity UI Canvas. Renders to a RawImage and intercepts input like other UI elements.</li>
+<li>Drop the BrowserGUI prefab into a canvas element to use.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>You can always create your own input manager by extending one of these or by implementing <code>IBrowserUI</code> outright. Set browser.UIHandler to your custom implementation before the first call to browser.Update(). You can also set it to null, which will disable all input.</li>
+<li>Mouse scroll speed and double-click handling options can be adjusted by altering myBrowserUI.InputSettings.</li>
+</ul>
+<h1 id="customization"><a class="header-link" href="#customization"></a>Customization</h1>
+<ul class="list">
+<li>Customize <code>alert()</code> dialogs, <code>prompt()</code> dialogs, <code>beforeUnload</code> dialogs and context menus by editing ZFBrowser/Resources/Browser/Dialogs.html</li>
+<li>Customize error pages by editing ZFBrowser/Resources/Browser/Errors.html<ul class="list">
+<li>Hook these events by listening to <code>Browser.onLoadError</code>/<code>onCertError</code>/<code>onSadTab</code>.</li>
+</ul>
+</li>
+<li>Mouse cursors are:<ul class="list">
+<li>Stored in ZFBrowser/Resources/Browser/Cursors.png. (These are more-or-less the base Chromium icons.)</li>
+<li>Loaded and managed by the <code>BrowserCursor</code> class.</li>
+<li>To change how a current cursor looks without altering the size, just edit Cursors.png.</li>
+<li>If you wish to change the cursor sizes or which cursor types map to which Cursors.png item, take a look at IconGenerator.cs. (This script isn&#39;t intended for general use, so be prepared to get your hands dirty.)</li>
+</ul>
+</li>
+</ul>
+<h1 id="debugging"><a class="header-link" href="#debugging"></a>Debugging</h1>
+<h2 id="page-debugging"><a class="header-link" href="#page-debugging"></a>Page Debugging</h2>
+<p>Often during development, you will find your pages need debugging.</p>
+<p>Tip: You don&#39;t always have to restart the game to test a change, in some cases you can simply refresh the page. (Unity inspector -&gt; browser instance -&gt; Refresh or Page inspector -&gt; ctrl+r).</p>
+<p>Here&#39;s a few way to go about it:</p>
+<h3 id="page-inspector"><a class="header-link" href="#page-inspector"></a>Page Inspector</h3>
+<p>You can access the Webkit/Chromium inspector, which opens in a new window beside the running game.</p>
+<ul class="list">
+<li>Under the Editor in play mode: Select the Browser, then click &quot;Show Dev Tools&quot;</li>
+<li>You can also use browser.ShowDevTools() to open an inspector window.</li>
+<li>This inspector can be a bit unstable at times. If you have issues, try a different debugging method or <a href="#chromium-out-of-process">push Chromium out of process</a></li>
+</ul>
+<h3 id="external-page-inspector"><a class="header-link" href="#external-page-inspector"></a>External Page Inspector</h3>
+<p>You can access the page inspector from another browser.</p>
+<ul class="list">
+<li>To debug when running in the Editor, visit <a href="http://localhost:9848/">http://localhost:9848/</a></li>
+<li>To debug when running a debug build, visit <a href="http://localhost:9849/">http://localhost:9849/</a></li>
+<li>Release builds cannot be debugged using this method.</li>
+<li>Use a same-version-a-the-plugin Chromium-based browser to load the above URLs.</li>
+</ul>
+<h3 id="ordinary-browser"><a class="header-link" href="#ordinary-browser"></a>Ordinary Browser</h3>
+<p>You can also load your pages in an ordinary browser and debug them there. If you do, you may find it useful to create small &quot;log what happened&quot; stubs for the functions you expose from Unity. Call functions you want to test from the JavaScript console.</p>
+<h2 id="visual-studio-tools-for-unity"><a class="header-link" href="#visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity</h2>
+<p>Chromium/CEF don&#39;t play nice with Visual Studio Tools for Unity. If you want to use C# debugging with this tool, <a href="#chromium-out-of-process">push Chromium out of process</a>.</p>
+<h2 id="chromium-out-of-process"><a class="header-link" href="#chromium-out-of-process"></a>Chromium out of Process</h2>
+<p>Under the Windows Unity Editor we host the root Chromium process within the Unity Editor. This gives us better performance, but causes some issues such as inspector and debugger stability/usability.</p>
+<p>If you are having issues, you can push Chromium out of the Editor process. It&#39;s a bit slower, but should be more stable for these use cases. To do this, open up BrowserNative.cs and find where <code>PROXY_BROWSER_API</code> is defined. Add <code>UNITY_EDITOR_WIN</code> to the list of conditions that trigger it and restart the Editor.</p>
+<p>On OS X and Linux, the root Chromium process always runs outside the editor.</p>
+<p>On builds, the root Chromium process always runs within your game for best performance.</p>
+<h1 id="cookies"><a class="header-link" href="#cookies"></a>Cookies</h1>
+<ul class="list">
+<li>Delete all cookies with <code>browser.CookieManager.ClearAll()</code>.</li>
+<li>Grab the cookies from the browser with <code>browser.CookieManager.GetCookies()</code>. This is asynchronous and returns a promise, see <a href="#promises">the promise section</a> for more information on the promise library.</li>
+<li>Once you have a cookie, you can make edits and call <code>cookie.Update()</code> or get rid of it with <code>cookie.Delete()</code>.</li>
+<li>Create new cookies from scratch with <code>new Cookie(browsser.CookieManager)</code> adjust the fields (be sure to set at least a domain, name, and value!) then create it with <code>cookie.Update()</code>.</li>
+<li>Aside from clearing all cookies, the Cookie API is a bit experimental, in particular, the dates may not function very well.</li>
+</ul>
+<h1 id="notes-2"><a class="header-link" href="#notes-2"></a>Notes</h1>
+<ul class="list">
+<li>You can customize which browser items the user is allowed to right-click (and get a context menu on). Look in the inspector under &quot;Allow Context Menu On&quot;. By default, only text boxes will allow a context menu.</li>
+<li>By default, the <code>&lt;body&gt;</code> of pages will be rendered as transparent. You can change to from fully transparent to any fully opaque color by changing the &quot;Background Color&quot; option in the inspector. The color must be changed before the first <code>Update()</code>.</li>
+<li>Custom mouse cursors are supported via <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/cursor">CSS cursors</a>.</li>
+<li>You can control what happens when navigation attempts to open a new window. Change <code>browser.newWindowAction</code> to a value of your choice. If you&#39;d like to allow opening new windows inside the game world, check out the NewWindow demo.</li>
+<li>We use a user agent that makes most websites think we&#39;re Chrome, but it does identify the engine, library, and your application&#39;s name and version. Change your application&#39;s name and version in the Player Settings. Restart the editor to see changes.</li>
+<li>You can force your own user agent by calling <code>UserAgent.SetUserAgent(string)</code>. This must be called before the first browser initializes. (In the Editor you must restart to see this change; it&#39;s immutable once the first browser initializes.)</li>
+<li>This system uses Chromium&#39;s separate process rendering architecture. It is normal to see one or more <code>ZFGameBrowser</code> child processes once a browser has been opened.</li>
+<li>A number of events, such as page load error, are available for you to hook into. Search Browser.cs for &quot;public event&quot; and read the documentation above each.</li>
+<li>Disabling the Browser MonoBehaviour will not stop the underlying browser from running. Destroy the object or load a blank page to free up resources a page is using.</li>
+<li>When a browser&#39;s image changes, we re-upload the texture to the GPU. Generating mipmaps is expensive, so the included prefabs turn off mipmap generation and use a special mipmap-emulating shader that &quot;fakes&quot; a texture with mipmaps, keeping ugly pixelation at bay for a minimal cost. Check out the Materials/EmulatedMipmap folder.</li>
+<li>You can adjust the command-line switches sent to Chromium by fiddling with <code>BrowserNative.commandLineSwitches</code>. Read the comment above it in BrowserNative.cs for instructions.</li>
+</ul>
+<h2 id="latency/performance"><a class="header-link" href="#latency/performance"></a>Latency/Performance</h2>
+<p>The browser is rendered offscreen in a separate process and the resulting pixels are transferred to a texture. Performance will not be as good as native Chromium, but should be fine when using either small textures or minimal animation.</p>
+<p>Latency:</p>
+<ul class="list">
+<li>All activity (mouse clicks, JS calls, input) is sent asynchronously to a separate renderer process and the results are asynchronously reported back. As such, there is a short delay between when a command is issued and when the results are visible. The delay should be quite reasonable in most cases, but don&#39;t expect results the same frame you issue a command.</li>
+<li>Avoid using a Browser for latency-critical use cases such as rhythm games, world-aligned HUD markers, and rendering mouse cursors.</li>
+</ul>
+<p>Performance:</p>
+<ul class="list">
+<li>Try to use small (texture size) Browsers for animations and things that frequently update. Large sizes are more suitable for static displays and user interfaces.</li>
+<li>Frame updates for large (resolution) browsers are expensive. Often the final image is composited on the GPU, pulled back to the CPU, then pushed to the GPU again from a different process. Depending on the hardware, size of texture, and frequency of updates, this can impact framerates poorly.</li>
+<li>Remember that on almost all systems the browsers use the same GPU for rendering that Unity does. If you have heavy content, be sure to factor this into your rendering budget.</li>
+</ul>
+<h1 id="adobe-flash"><a class="header-link" href="#adobe-flash"></a>Adobe Flash</h1>
+<p>This version of ZFBrowser includes experimental support for Adobe Flash. Enabling it requires some extra steps.</p>
+<h2 id="do-i-need-it?"><a class="header-link" href="#do-i-need-it?"></a>Do I need it?</h2>
+<p>The Web is an evolving place and ever-increasingly interactive web sties don&#39;t need Flash to support media-rich content.</p>
+<p>You need Flash if you want to:</p>
+<ul class="list">
+<li>Display content that is only available with Flash.</li>
+<li>Watch video that uses proprietary codecs, such as h.264. ZFBrowser doesn&#39;t have licenses for these codecs, but Flash does and many video streaming sites will fall back to using a Flash player to stream content if necessary.</li>
+</ul>
+<h2 id="for-myself-(manual-install)"><a class="header-link" href="#for-myself-(manual-install)"></a>For myself (manual install)</h2>
+<p>If you are developing locally, prototyping, or will only distribute your application to computers that you control, use this method.</p>
+<p>Instructions:</p>
+<ul class="list">
+<li>Install the Adobe Flash Player on your system.<ul class="list">
+<li>Go to <a href="https://get.adobe.com/flashplayer/otherversions/">https://get.adobe.com/flashplayer/otherversions/</a></li>
+<li>Select your OS</li>
+<li>Select the latest &quot;PPAPI&quot; version available.</li>
+<li>Uncheck boxes for things you don&#39;t want.</li>
+<li>Download now.</li>
+</ul>
+</li>
+<li>Install using the usual methods for your OS.</li>
+<li>Open up BrowserNative.cs<ul class="list">
+<li>Under <code>commandLineSwitches</code> add <code>--enable-system-flash</code></li>
+</ul>
+</li>
+<li>Go! (You may need to restart the Editor.)</li>
+</ul>
+<p>You&#39;ll need to install Flash on every computer you distribute your application to.</p>
+<h2 id="for-anyone-(distribute-flash)"><a class="header-link" href="#for-anyone-(distribute-flash)"></a>For anyone (distribute Flash)</h2>
+<p>To distribute Flash with your application, you&#39;ll need to get permission from Adobe and run their installer with your installer.</p>
+<p>General flow: <small>Untested, let me know how it goes!</small></p>
+<ul class="list">
+<li>Start development using the instructions in the last section, including the <code>--enable-system-flash</code> flag.</li>
+<li>Get a distributor&#39;s license for your application<ul class="list">
+<li><a href="http://www.adobe.com/products/players/flash-player-distribution.html">Apply here</a></li>
+<li>Fill out paperwork, get approval from Adobe.</li>
+<li>Get an installer from Adobe. You need the PPAPI version (for Chromium).</li>
+</ul>
+</li>
+<li>Set up the Flash installer to run when your application installs.</li>
+</ul>
+<h1 id="known-issues"><a class="header-link" href="#known-issues"></a>Known issues</h1>
+<ul class="list">
+<li>Support for the inspector is experimental, it can be unstable at times.</li>
+<li>Support for Flash is experimental. Sometimes a command prompt window may flash while starting Flash content.</li>
+<li>On occasion the editor may crash/hang when closing/switching projects or opening pop-up windows.</li>
+</ul>
+<h1 id="ideas"><a class="header-link" href="#ideas"></a>Ideas</h1>
+<ul class="list">
+<li>Build your complicated crafting UI in HTML</li>
+<li>Replace your HUD with a browser page</li>
+<li>Door access/control panels</li>
+<li>In-game billboard advertisements</li>
+</ul>
+<h1 id="get-help"><a class="header-link" href="#get-help"></a>Get Help</h1>
+<p>Need help? <a href="mailto:support@zenfulcrum.com">support@zenfulcrum.com</a></p>
+</div>
+
+
+</body></html>
+
