@@ -1,0 +1,27 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Data\_data\FSMInfo.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Menu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Events.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Manager.cs" Line="300" Column="11" />
+      <File FileName="Assets\Scripts\EditorUI\MouseDownEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Action\SetFirstPerson.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Action\ControllerInteract.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Action\PointerSelected.cs" Line="1" Column="1" />
+      <File FileName="Assets\AddState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Action\ChangeColor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Action\Action.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Action\UI\ChangeColorUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ObjMsgCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Action\UI\PhysicalSettingUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Action\PhysicalSetting.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EditorUI\ActionList.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Data\_data\FSMInfo.cs" Line="20" Column="21" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
