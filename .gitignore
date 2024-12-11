@@ -141,9 +141,9 @@ UpgradeLog*.htm
 App_Data/*.mdf
 App_Data/*.ldf
 
-# =========================
+# ==========================
 # Windows detritus
-# =========================
+# ==========================
 
 # Windows image file caches
 Thumbs.db
