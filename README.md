@@ -8,6 +8,8 @@
 
 ### **VR Promotes a New Ecology of Education and Training**
 
+this is month
+
 - Simulates practical training environments.
 - Saves time and costs.
 - Enhances learning effectiveness and efficiency.
