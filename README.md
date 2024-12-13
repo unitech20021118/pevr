@@ -11,7 +11,7 @@
 - Simulates practical training environments.
 - Saves time and costs.
 - Enhances learning effectiveness and efficiency.
-- More secure and reliable.
+- More secure and reliable. ok.
 
 ### **How to Create VR Courseware**
 
