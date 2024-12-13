@@ -1,7 +1,6 @@
 <img src="PEVR-README/PEVRicon.png" width = "15%">
 
 ---
-
 # **U-Creation PEVR Engine**
 
 ## A powerful tool for rapidly creating VR courseware.
