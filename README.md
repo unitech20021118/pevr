@@ -52,6 +52,6 @@ Demonstration diagram
 
 [PEVR操作手册](PEVR-README/pevr使用手册.doc)
 
-### Contact information
+### Contact information 
 
 mailbox：unitech20021118@gmail.com
